@@ -10,7 +10,7 @@ const signupRouter = require('./src/routes/signuproute');
 const homeRouter = require('./src/routes/homerouter'); // Part #1 Point 3
 const booksRouter = require('./src/routes/booksroute');
 const authorsRouter = require('./src/routes/authorsroute');
-const logoutRouter = require('./src/routes/logoutroute');
+
 
 const app = new express; 
 
@@ -31,7 +31,6 @@ app.use('/signup',signupRouter);
 app.use('/home',homeRouter); 
 app.use('/books',booksRouter); 
 app.use('/authors',authorsRouter); 
-app.use('/logout',logoutRouter); 
 
 
 
