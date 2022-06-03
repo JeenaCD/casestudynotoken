@@ -1,6 +1,6 @@
 const express = require('express'); 
 const path = require ('path'); 
-const cors = require('cors');
+const cors = require('cors'); // Part #2 Point 7
 const bodyParser = require('body-parser'); // Part #1 Point 2
 const cookieParser = require('cookie-parser');
 
@@ -18,15 +18,9 @@ const app = new express;
 app.set('views','./src/views'); 
 app.set('view engine','ejs'); 
 
-// var corsOptions = {
-//     "origin": "*",
-//   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-//   "preflightContinue": false,
-//   "optionsSuccessStatus": 204
-// }
+
 
 app.use(bodyParser.urlencoded({extended:true}));
-// app.use(cors(corsOptions));
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname , '/public'))); 
