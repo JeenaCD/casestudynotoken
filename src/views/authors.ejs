@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pustakam</title>
+
+    <script src="https://kit.fontawesome.com/859e7ab76e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <link rel='stylesheet' href='css/authors.css'>
+</head>
+<body>
+
+    <!--Navbar-->
+    <%- include("partials/navbar"); -%>
+    <!--Navbar end-->
+    
+
+    <h1 class="display-2 bg-img text-white bg-overlay text-center">Authors</h1>
+
+    <div class="container cards">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <ul class="event-list">
+
+              <%for(let i=0;i<authors.length;i++){%>
+
+            <li>
+             
+              <img class = "rounded-circle image" alt="" src="/images/<%=authors[i].image%>" />
+              <div class="info rounded">
+                <h2 class="title"><%=authors[i].title%></h2>
+                <br>
+                <button type="button" class="btn btn-info btn-sm"><a href="/authors/<%=authors[i]._id%>"> Read more</a></button>
+              </div>
+             
+            </li>
+
+            <%}%> 
+  
+          </ul>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+  
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center text-white py-3">© 2019 Copyright:
+            <a href="/home"> Pustakam.com</a>
+            </div>
+            <!-- Copyright -->
+        
+    </footer>
+    <!-- Footer end -->
+
+
+
+</body>
+</html>
