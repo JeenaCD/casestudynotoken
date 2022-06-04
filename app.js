@@ -1,6 +1,6 @@
 const express = require('express'); 
 const path = require ('path'); 
-const cors = require('cors'); // Part #2 Point 7
+const cors = require('cors'); 
 const bodyParser = require('body-parser'); // Part #1 Point 2
 const cookieParser = require('cookie-parser');
 
@@ -21,7 +21,7 @@ app.set('view engine','ejs');
 
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(cors());
+app.use(cors());        // Part #2 Point 7
 app.use(express.json());
 app.use(express.static(path.join(__dirname , '/public'))); 
 app.use(cookieParser());

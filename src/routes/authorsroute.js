@@ -29,7 +29,7 @@ authorsRouter.post('/add', function (req, res) {
 
     var item={
         title:req.body.title,
-        image:req.body.image, // Part #2 Point 8
+        image:req.body.image,       // Part #2 Point 8
         about:req.body.about
     }
     console.log(item)  ;
