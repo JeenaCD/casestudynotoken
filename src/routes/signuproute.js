@@ -18,7 +18,7 @@ signupRouter.post("/adduser",async (req,res)=>{
 
     // create a new user
     const user = new User({
-        id: req.body.id,
+        id: req.body.id,  // Part #2 Point 10
         uid: req.body.uid,
         pwd:hashedPassword
     })
